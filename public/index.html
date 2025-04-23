@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advocally</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🥑%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ 
+    <!-- navpane: logo and name -->
+    <header class="headerContainer">
+        
+        <nav class="navTab">
+
+            <div class="frontTab">
+                
+                <div class="headerPlate">
+                    
+                    <div class="logoContainer">
+                        <a  href="index.html">
+                            <img id="logo"  src="public/logo+name.png" alt="logo"/>
+                        </a>
+                    </div>
+                    <!-- <h4 id="advocally">advocally</h4> -->
+                </div>
+            </div>
+            
+            <nav class="tabPane">
+
+                <div class="tab">
+                    <a href="donate.html">
+                        <h4>Donate</h4>
+                    </a>
+                </div>
+
+                <div class="tab">
+                    <a href="volunteer.html">
+                        <h4>Volunteer</h4>
+                    </a>
+                </div>
+                
+                <div class="tab">
+                    <a href="blogs.html">
+                        <h4>Blogs</h4>
+                    </a>
+                </div>  
+                
+                <div class="tab">
+                    <a href="about.html">
+                        <h4>About us</h4>
+                    </a>
+
+        
+                </div>      
+            </nav>
+            
+        </nav>
+    </header>
+    
+    <!-- <section class="frontPage"> -->
+
+    <main class="frontPage">
+
+        <!-- welcome section: advocally name and brief info below-->
+        <section class="introSec">
+            <div class="introContainer">
+                <div>
+                    <h2>hello advocate.</h2>
+                </div>
+                <div class="advocallyIntro">    
+                    <h4>Stay informed with the current, important societal issues around you. 
+                        Advocally presents you a board of <span class="subHeadingBold">legitimate, up-to-date statistical data </span> of what is truly going on around Alberta.
+                        Feel free to check out our Donate, Volunteer, and Blogs tab to take part in making a change for our society and the environment.
+                    </h4>
+                    <h4>We appreciate you for your genuine effort of being here as a contributing individual!
+                    </h4>
+                </div>
+            </div>
+        </section>
+        
+        <!-- KPI stats-->
+        <section class="kpiSec">
+            
+            <!-- WILDFIRES-->
+            <div class="wildfireContainer">
+                <div class="wildfireImageContainer">
+                    <!-- <img class="wildfireImage" src="public/map-2088308_1920.png" alt="canada"/> -->
+                    <iframe src="wildfire-map-final.html" width="100%" height="600" frameborder="0"></iframe>
+                </div>
+                <div class="wildfireDesc">
+                    <div class="wildfireNum">
+                        <h4>0</h4>
+                    </div>  
+                    <div class="wildfireText">
+                        <p>recorded wildfires in Alberta right now</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DRUG ABUSE -->
+            <div class="drugContainer">
+                <div class="drugDesc">
+                    <p><span class="drugBoldText">Alberta’s Drug Crisis: A Growing Emergency </span></p>
+                        
+                    <p>In recent years, fentanyl and other synthetic opioids have driven a surge in 
+                        fatalities, impacting individuals across all demographics. </p>
+
+                    <p>Urban centers like Calgary and Edmonton have seen the <span class="drugBoldText">highest overdose rates,</span> 
+                        while rural areas face limited access to harm reduction services. </p>
+
+                    <p>Despite efforts to expand supervised consumption sites and addiction recovery 
+                        programs, political and social debates continue to limit their reach. </p>
+                        
+                    
+                </div>
+                <div class="drugChartContainer">
+                    <iframe id="drugChart" src="drug-chart.html" frameborder="0"></iframe>
+                    <p class="citation">Alberta Health Services. (2025). Health Analytics Reports. Retrieved from https://healthanalytics.alberta.ca/SASVisualAnalytics/?reportUri=%2Freports%2Freports%2F1bbb695d-14b1-4346-b66e-d401a40f53e6&sectionIndex=0&sso_guest=true&reportViewOnly=true&reportContextBar=false&sas-welcome=false</p>
+                </div>
+            </div>
+             
+
+
+            <!-- HOMELESSNESS -->
+             <div class="homelessContainer">
+                <div class="homelessChartContainer">
+                    <iframe id="homelessChart" src="homeless-chart.html"  frameborder="0"></iframe>
+                    <p class="citation">Homeless Hub (2022), Retrieved from https://homelesshub.ca/ </p>
+                </div>
+                <div class="homelessDesc">
+                    
+                    <p><span class="homelessBoldText">150,000 to 300,000</span> people are homeless in Canada, as of December 2024 </p>
+                   
+                    <!-- <p><span class="homelessBoldText">Between 30,000 and 35,000</span> people are homeless on any given night in Canada. </p> -->
+                    <p><span class="homelessBoldText">Toronto</span> has the highest case of homeless people in Canada</p>
+                    <p><span class="homelessBoldText">66.7%</span> of homeless people in Canada are males</p>
+                    <p><span class="homelessBoldText">33.10%</span> of Canadian homeless come from <span class="homelessBoldText">Indigenous communities</span></p>
+                    <!-- <p><span class="homelessBoldText">86% of homeless shelters</span> in Canada are in Ontario, British Columbia, Quebec, and Alberta, and 40% of them are in Ontario alone</p> -->
+                    <p>The annual cost of homelessness is over <span class="homelessBoldText">$10 billion.</span></p>
+                    <p>The Canadian Government is investing <span class="homelessBoldText">$4 billion</span> over ten years to expand funding for the homeless</p>
+
+                    <p class="citation2">N. Blair (Dec.31, 2024). Made in CA. Homelessness statistics in Canada. Retrieved from https://madeinca.ca/homelessness-statistics-canada/</p>
+                </div>
+            </div>
+            <div class="shelterContainer">
+
+                <div class="shelterChartContainer">
+                    <iframe id="shelterChart" src="shelter-chart.html"  frameborder="0"></iframe>                
+                    <p class="citation">Shelter Usage in Alberta. (April 2025). Government of Alberta. Retrieved from https://www.alberta.ca/shelter-usage-in-alberta#jumplinks-0 </p>
+                </div>
+                <div class="shelterDesc">
+                    <p>Alberta has <span class="shelterBoldText">2,878 emergency shelter beds,</span> yet shelters often operate at or near full capacity, especially in winter</p>
+                    <p>In Calgary, the 2022 PiT Count recorded 2,782 homeless individuals, with <span class="shelterBoldText">shelters stretched thin.</span></p>
+    
+                    <p><span class="shelterBoldText">Edmonton’s</span> By Name List (Jan 2024) reported <span class="shelterBoldText">3,051 homeless individuals,</span> with <span class="shelterBoldText">694 unsheltered</span> due to shelter shortages. </p>
+    
+                    <p>Outside major cities, places like Lethbridge and Red Deer have expanded shelters, 
+                        but <span class="shelterBoldText">many smaller communities lack infrastructure, forcing reliance on urban centers.</span></p>
+                    <p>Addressing homelessness requires increased shelter capacity, affordable housing, and preventive strategies.</p>
+                </div>
+            </div>
+                
+            
+                 
+        </section>
+        
+            <script>
+           
+            </script>
+
+     
+</body>
+
+</html>

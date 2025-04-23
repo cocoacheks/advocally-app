@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberta Wildfire Map</title>
+    <!-- Link to Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Style for the map container -->
+    <style>
+        /* Set the size of the map */
+        #map { 
+            height: 100%; /* Adjust height */
+            width: 100%;  /* Adjust width */
+            margin: 20px;  /* Optional: add some space around the map */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <!-- link to css style -->
+    <link rel="stylesheet" href="wildfire.css"/>
+</head>
+<body>
+    <div class="mapContainer">
+        <div id="map"></div>
+        <button id="simulateFire">Simulate Wildfires</button>
+    </div>
+    
+    <!-- Link to Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Create the map centered around Alberta (approximate center)
+        const map = L.map('map').setView([53.7267, -116.3705], 6); // Centered on Alberta
+        
+        // Add OpenStreetMap tiles to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        
+        // Define the boundary polygon for Alberta (coordinates are just an approximation)
+        const albertaBounds = [
+            [60.0, -118.0],  // Top-left corner (NW)
+            [60.0, -110.0],  // Top-right corner (NE)
+            [49.0, -110.0],  // Bottom-right corner (SE)
+            [49.0, -118.0]   // Bottom-left corner (SW)
+        ];
+        
+        // Set the bounds of the map to Alberta's coordinates
+        const bounds = L.latLngBounds(albertaBounds);
+        map.setMaxBounds(bounds);
+        
+        // Set zoom levels to control how much zoom the user can have
+        map.setZoom(4.5);
+        map.options.maxZoom = 8;
+        map.options.minZoom = 5;
+        
+        // Add the boundary polygon for visual reference
+        L.polygon(albertaBounds, { color: 'transparent', fillColor: 'transparent', fillOpacity: 0.2 }).addTo(map);
+
+        // NASA API setup
+        const nasaAPI = "https://firms.modaps.eosdis.nasa.gov/api/country/csv/viirs-snpp/?country=CAN&date=2024-03-23&key=YOUR_NASA_API_KEY";
+
+        fetch(nasaAPI)
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.split("\n").slice(1); // Skip header row
+                rows.forEach(row => {
+                    const cols = row.split(",");
+                    const lat = parseFloat(cols[0]);
+                    const lon = parseFloat(cols[1]);
+                    const confidence = cols[8];
+
+                    // Show only fires within Alberta's bounds
+                    if (lat <= 60.0 && lat >= 49.0 && lon >= -118.0 && lon <= -110.0) {
+                        L.circleMarker([lat, lon], {
+                            color: confidence > 80 ? 'red' : 'orange',
+                            radius: 6,
+                            fillOpacity: 0.8
+                        }).bindPopup(`🔥 Wildfire detected!<br>Confidence: ${confidence}%`).addTo(map);
+                    }
+                });
+            })
+            .catch(error => console.error("Error fetching wildfire data:", error));
+
+        // Simulated Wildfire Data
+        const fakeWildfires = [
+            { lat: 53.7267, lon: -116.3705, confidence: 95 },
+            { lat: 54.0, lon: -115.0, confidence: 70 },
+            { lat: 51.5, lon: -113.5, confidence: 85 }
+        ];
+
+        // Fire Simulation button event
+        document.getElementById("simulateFire").addEventListener("click", () => {
+            fakeWildfires.forEach((fire) => {
+                L.circleMarker([fire.lat, fire.lon], {
+                    color: fire.confidence > 80 ? 'red' : 'orange',
+                    radius: 6,
+                    fillOpacity: 0.8
+                }).bindPopup(`🔥 Simulated Wildfire<br>Confidence: ${fire.confidence}%`).addTo(map);
+            });
+
+        
+        });
+    </script>
+</body>
+</html>

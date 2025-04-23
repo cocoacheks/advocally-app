@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Google Chart</title>
+  <style>
+    #columnchart_drug {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      overflow:visible;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Responsive Chart Container -->
+  <div id="columnchart_drug"></div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    let chart;
+    let data;
+    let view;
+    let options;
+
+    function drawChart() {
+      data = google.visualization.arrayToDataTable([
+        ["Element", "rate", { role: "style" } ],
+        ["2020", 27.0, "#EECA90"],
+        ["2021", 37.1, "#A09555"],
+        ["2022", 33.8, "#EECA90"],
+        ["2023", 40.0, "#A09555"],
+        ["2024", 25.2, "#EECA90"]
+      ]);
+
+      view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+        { calc: "stringify", sourceColumn: 1, type: "string", role: "annotation" },
+        2]);
+
+      const chartContainer = document.getElementById("columnchart_drug");
+      const containerWidth = chartContainer.offsetWidth;
+
+      options = {
+        title: "Rate of drug poisoning deaths per 100,000 person by year",
+        width: containerWidth,
+        height: containerWidth * 0.66, // Keep aspect ratio
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+        backgroundColor: "transparent",
+        titleTextStyle: {color: "#202E1E"},
+        chartArea: {
+          width: "90%",
+        },
+        vAxis: {
+          minValue: 0,
+          maxValue: 45,
+          title: "Rate per 100,000 persons",
+          titleTextStyle: {color: "#202E1E"},
+          textStyle: {color: "#202E1E"}
+        },
+        hAxis: {
+          titleTextStyle: {color: "#202E1E"},
+          textStyle: {color: "#202E1E"}
+        }
+      };
+
+      chart = new google.visualization.ColumnChart(chartContainer);
+      chart.draw(view, options);
+    }
+
+    // Redraw chart on resize
+    window.addEventListener("resize", () => {
+      drawChart();
+    });
+  </script>
+
+</body>
+</html>

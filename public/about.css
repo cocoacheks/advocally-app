@@ -1,0 +1,895 @@
+:root {
+
+    /* 2nd cheska's palette */
+    /* --background-color: #dcd8d5;
+    --page-color: #56371e;    
+    --kpi-border-color: #366831;
+    --kpi-tab-color: #a5c473; kpi background
+    --font-color: black;
+
+    --logo-font: #e3dbdb;
+    --tab-color: #846954;
+    --tab-hover: #cbac7a;
+    --tab-font: #fffefd;  */
+
+    --background-color: #FEFBEF; 
+    --page-color: #80924D;
+    --tab-color: #A09555;
+
+    /* --logo-font: #faf2f2; */
+    --tab-font: #FEFBEF;
+
+    /* cream */
+    --wildfire-color-1: #FEFBEF;
+    --wildfire-color-2: #FEFBEF;
+
+    --drug-color-1: #FEFBEF;
+    --drug-color-2: #FEFBEF;
+
+    --homeless-color-1: #FEFBEF;
+    --homeless-color-2: #FEFBEF;
+
+    --shelter-color-1: #FEFBEF;
+    --shelter-color-2: #FEFBEF;
+
+    --bebasP: #202E1E;
+    --bebasB: #80924D;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    /* transition-duration: 500ms */
+}
+
+body {
+    /* background-color: var(--background-color); */
+    background-color: #FEFBEF;
+    color: var(--kpi-tab-color);
+    padding: 0.6rem;
+    overflow-x: hidden;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.8px;
+    /* font-family:  */
+    
+}
+
+a {
+    text-decoration: none;
+}
+/* a:hover {
+    /* color: lightgreen;  */
+
+.boldText {
+    color: var(--drug-color-2);
+}
+
+header {
+    /* background: white; */
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+
+.logoContainer {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.6rem;
+    /* padding-top: 10rem; */
+    overflow: hidden;
+    background: #FEFBEF;
+
+    position: relative;
+    border-radius: 50%;
+    /*circle border */
+    /* background-color: rgb(215, 237, 202);  */
+    padding: 0.3rem;
+}
+
+#logo {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    /* border-radius: 5px; */
+
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    /* margin-right: 0.5rem; */
+    margin-left: 0.9rem;
+
+
+}
+
+.navTab {
+    display: flex;
+    flex-direction: row;
+    gap: 1.8rem;
+
+    position: absolute;
+    top: 47px;
+    
+}
+
+
+
+.frontTab {
+    background-color: var(--page-color);
+
+  
+    width: 13.5rem;
+    height: 8.4rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    /* margin-left: -0.001rem; */
+    
+
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 2rem;
+    padding-top: 3.5rem;
+    padding-right: 2.1rem;
+}
+
+.headerPlate {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    /* background-color: white; */
+    /* hover text, tab goes up */
+}
+
+#advocally {
+    color: var(--logo-font);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.16rem;
+}
+
+.tabPane {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+.tab {
+    background-color: var(--tab-color);
+    width: 140px;
+    height: 60px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tab:hover {
+    /* margin-top: 0px;
+    height: 65px;
+    background-color: var(--tab-hover); */
+    transform: translateY(-5px);
+    height: 65px;
+}
+
+.tab a {
+    color: var(--tab-font);
+}
+
+.highlightTab {
+    background-color: var(--page-color);
+}
+main {
+    background-color: var(--page-color);
+}
+
+
+.frontPage {
+    margin-top: 7rem;
+    position: relative;
+    background-color: var(--page-color);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-bottom: 3rem;
+
+    max-height: 100%;
+
+}
+
+.frontPage h2 {
+    color: white;
+}
+
+.frontPage h4 {
+    font-weight: 700;
+    color: rgb(224, 220, 220);
+}
+
+/* INTRO TEXT */
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+
+.subHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--bebasP);
+    font-family: "Aleo";
+}
+
+
+.introContainer h2 {
+    font-size: 4rem;
+}
+
+.introContainer h4 {
+    line-height: 1.8rem;
+}
+
+.subHeading {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    line-height: 1.8rem;
+    gap: 1.5rem;
+
+}
+
+/* PROoooooooFILEEEEES */
+
+.profileSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.profileCard {
+    background-color: var(--drug-color-1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    border-radius: 30px;
+
+    width: 400px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.profileImageContainer {
+    background-color: gray;
+    border-radius: 30px;
+    width: 100%;
+    height: 70%;
+    object-fit:contain;
+}
+
+.profileImageContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.profileDetails {
+    margin: 1rem;
+    padding: 2rem;
+    padding-left: 0.5rem;
+
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--bebasP);
+
+    align-items:center;
+    justify-content: center;
+    
+}
+
+.profileDetails h2 {
+    color: var(--bebasB);
+}
+
+.profileDetails p {
+    font-family: "Aleo";
+    display: block;
+    text-align: center;
+}
+
+.socialPane {
+    display: flex;
+    margin-top: 1rem;
+    gap: 0.7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social {
+    color: var(--page-color);
+    font-size: 2rem;
+
+    display: block;
+    text-align: center;
+}
+
+.social:hover {
+    color: var(--bebasP);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+    .frontPage {
+        height: 100%;
+    }
+    
+    .navTab {
+        width: 100%;
+        gap: 0.3rem;
+        margin-right: 25px;
+    }
+
+    .tabPane {
+        gap: 0.5rem;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 49px;
+        height: 49px;
+        margin-top: -7.5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width:60%;
+        height: 60%;
+        object-fit: contain;
+        border-radius: 5px;
+        
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-left: 0.5rem;
+    }
+
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+        width: 20%;
+        height: 40px;
+    
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    
+        margin-top: 25px;
+        padding: 0.7rem;
+    
+        letter-spacing: 0.8px;
+    
+        }
+
+    .tab a {
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introContainer {
+        width: 100%;
+        padding: 0rem;
+        padding-top: 2rem;
+        gap: 0.5rem;
+        z-index: 10;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .introSec {
+        /* margin: 2.9rem; */
+        margin-top: -1rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .introContainer h2 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+   
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .subHeading {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .subHeading {
+        line-height: -1rem;
+    }
+
+    .teamProfiles {
+        width: 100%;
+    }
+
+    .profileSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.6rem;
+    }
+
+    .profileCard {
+        width: 100%;
+        height: 80%;
+    }
+
+    .profileImageContainer {
+        height: 70%;
+    }
+
+    .profileImageContainer img {
+        /*  object-fit: ;  
+        width: 100%;
+        height: 100%;
+        border-radius: 30px; */
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    } 
+
+    .profileDetails {
+        /* height: 30%; */
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .profileDetails h2 {
+        font-size: 0.9rem;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .profileDetails p {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 75px;
+        height: 75px;
+        margin-top: -3.8rem;
+    }
+
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+    width: 20%;
+    height: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0.7rem;
+    }
+
+    .tab a {
+        font-size: 0.6rem;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer,
+    .subHeading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:0 ;
+    }
+
+    .introSec {
+        margin: 2.9rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .subHeading {
+        padding: 0;
+    }
+
+    .profileSection {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .profileDetails {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .frontPage {
+        height: 100%;
+    }
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 90px;
+        height: 90px;
+        margin-top: -5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 5px;
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-right: 1.3rem;
+    }
+
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+    width: 20%;
+    height: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0.7rem;
+    }
+
+    .tab a {
+        font-size: 0.6rem;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introSec {
+        margin: 2.9rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .kpiSec {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wildfireContainer,
+    .drugContainer,
+    .homelessContainer,
+    .shelterContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wildfireImageContainer,
+    .wildfireDesc,
+    .drugChartContainer,
+    .drugDesc,
+    .homelessChartContainer,
+    .homelessDesc,
+    .shelterChartContainer,
+    .shelterDesc {
+        width: 100%;
+    }
+
+    .drugChartContainer .citation {
+        margin-top: 1.7rem;
+        font-size: 0.3rem;
+        /* margin-top: -1rem; */
+    }
+
+    .citation2 {
+        margin-top: 1rem;
+        font-size: 0.3rem;
+    }
+    .shelterChartContainer {
+        overflow: hidden;
+        height: 100%;
+        max-height: 500px;
+    }
+
+    #shelterChart {
+        overflow:hidden;     
+    }
+
+
+    .shelterDesc {
+        height: 600px;
+    }
+
+    .shelterDesc p {
+        font-size: 1rem;
+        /* line-height: 1.3rem; */
+    }
+    
+    .shelterBoldText {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .frontPage {
+        border-top-left-radius: 70px;
+        height: 100%;
+    }
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 130px;
+        height: 130px;
+        margin-top: -2.5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
+        border-radius: 5px;
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-right: 1.6rem;
+    }
+
+    
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+    width: 20%;
+    height: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0.7rem;
+    }
+
+    .tab a {
+        font-size: 0.6rem;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introContainer {
+        margin: 0;
+        padding: 0;
+    }
+
+    .introSec {
+        margin-bottom: 2.5rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .profileSection {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    .profileCard {
+        width: 30%;
+        height: 400px;
+    }
+
+    .profileDetails {
+        padding: 0;
+        margin-top: 0.5rem;
+        gap: 0.4rem;
+    }
+
+    .profileDetails h2 {
+        font-size: 0.8rem;
+    }
+
+    .profileDetails p {
+        font-size: 0.5rem;
+    }
+
+    
+}

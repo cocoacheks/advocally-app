@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🥑%3C/text%3E%3C/svg%3E" />
+
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Volunteer</title>
+</head>
+
+<body>
+
+
+    <!-- navpane: logo and name -->
+    <header class="headerContainer">
+        
+        <nav class="navTab">
+
+            <div class="frontTab">
+                
+                <div class="headerPlate">
+                    
+                    <div class="logoContainer">
+                        <a href="index.html">
+                            <img id="logo"  src="public/logo+name.png" alt="logo"/>
+                        </a>
+                    </div>
+                    <!-- <h4 id="advocally">Volunteer</h4> -->
+                </div>
+            </div>
+            
+            <nav class="tabPane">        
+
+                <div class="tab">
+                    <a href="donate.html">
+                        <h4>Donate</h4>
+                    </a>
+                </div>
+
+                <div class="tab highlightTab">
+                    <a href="volunteer.html">
+                        <h4>Volunteer</h4>
+                    </a>
+                </div>
+
+                <div class="tab">
+                    <a href="blogs.html">
+                        <h4>Blogs</h4>
+                    </a>
+                </div>
+                
+                <div class="tab">
+                    <a href="about.html">
+                        <h4>About Us</h4>
+                    </a>
+                </div>  
+                
+                <!-- <div class="tab">
+                    <a href="about.html">
+                        <h4>About us</h4>
+                    </a>        
+                </div>       -->
+            </nav>
+            
+        </nav>
+    </header>
+    
+    
+
+        <main class="frontPage">                
+                <div class="introContainer">
+                    
+                    <h2>Volunteer with us</h2>
+                    <p>Here are some Alberta and Canadian donation drives where you can participate
+                        and lend a hand.</p>
+                    </div>
+                    
+                    <div id="donationList">
+                        <!-- The donation data will be dynamically inserted here -->
+                    </div>            
+        
+                
+                
+                
+                <script>
+            // Fetch data from the backend API
+            fetch('https://us-central1-advocally-capstone-a1a41.cloudfunctions.net/api/getVolunteer')
+                .then(response => response.json())
+                .then(data => {
+                    // Process data and display it on the page
+                    const donationList = document.getElementById('donationList');
+                    const rows = data.values; // Assuming the response has a `values` field
+
+                    if (rows && rows.length > 0) {
+                        // Loop through each row (skip header row)
+                        rows.slice(1).forEach(row => {
+                            // Skip rows with missing data (e.g., no category or charity name)
+                            if (row[0] && row[1]) {
+                                const donationItem = document.createElement('div');
+                                donationItem.classList.add('donation-item');
+
+                                // Map columns from Google Sheets data
+                                donationItem.innerHTML = `
+                                    <h3>${row[1]}</h3> <!-- Charity Name -->
+                                    <p><strong>Cause:</strong> ${
+                                            row[0] === 'subAbuse' 
+                                                ? 'Substance Abuse/Addiction' 
+                                                : row[0] === 'homeless' 
+                                                ? 'Homelessness' 
+                                                : row[0] === 'mentalHealth' 
+                                                ? 'Mental Health' 
+                                                : row[0] === 'animal' 
+                                                ? 'Animal Welfare' 
+                                                : row[0] === 'wildFire'
+                                                ? 'Wildfire Relief'
+                                                : row[0] // Fallback to original category if none match
+                                        }</p> <!-- Category -->
+                                    <p><strong>Description:</strong> ${row[2] || 'No description available'}</p> <!-- Description -->
+                                    <a href="${row[3] || '#'}" target="_blank">Visit Website<i class="arrow fa-solid fa-arrow-right"></i></a> <!-- URL -->
+                                `;
+
+                                // Append the donation item to the list
+                                donationList.appendChild(donationItem);
+                            }
+                        });
+                    } else {
+                        donationList.innerHTML = '<p>No donation drives found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
+        </script>
+    </main>
+
+</body>
+
+</html>

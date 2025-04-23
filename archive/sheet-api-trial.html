@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
+    <title>Donate</title>
+</head>
+
+<body>
+
+    <!-- navpane: logo and name -->
+    <header class="headerContainer">
+        
+        <nav class="navTab">
+
+            <div class="frontTab">
+                
+                <div class="headerPlate">
+                    
+                    <div class="logoContainer">
+                        <img id="logo" src="public/logo.png" alt="logo"/>
+                    </div>
+                    <h4>Donate</h4>
+                </div>
+            </div>
+            
+            <nav class="tabPane">
+                <div class="tab">
+                    <a href="index.html">
+                        <h4>advocally</h4>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="volunteer.html">
+                        <h4>Volunteer</h4>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="blogs.html">
+                        <h4>Blog</h4>
+                    </a>
+                </div>
+                <div class="tab">
+                    <a href="about.html">
+                        <h4>About us</h4>
+                    </a>
+                </div>  
+            </nav>
+        </nav>
+    </header>
+
+    <main class="frontPage">
+        <h2>Donation Drives and Volunteering Opportunities</h2>
+        <div id="donationList">
+            <!-- The donation data will be dynamically inserted here -->
+        </div>
+
+        <script>
+            // Fetch data from the backend API
+            fetch('http://localhost:3000/getDonations')
+                .then(response => response.json())
+                .then(data => {
+                    // Process data and display it on the page
+                    const donationList = document.getElementById('donationList');
+                    const rows = data.values; // Assuming the response has a `values` field
+
+                    if (rows && rows.length > 0) {
+                        // Loop through each row (skip header row)
+                        rows.slice(1).forEach(row => {
+                            // Skip rows with missing data (e.g., no category or charity name)
+                            if (row[0] && row[1]) {
+                                const donationItem = document.createElement('div');
+                                donationItem.classList.add('donation-item');
+
+                                // Map columns from Google Sheets data
+                                donationItem.innerHTML = `
+                                    <h3>${row[1]}</h3> <!-- Charity Name -->
+                                    <p><strong>Category:</strong> ${row[0]}</p> <!-- Category -->
+                                    <p><strong>Description:</strong> ${row[2] || 'No description available'}</p> <!-- Description -->
+                                    <a href="${row[3] || '#'}" target="_blank">More Info</a> <!-- URL -->
+                                `;
+
+                                // Append the donation item to the list
+                                donationList.appendChild(donationItem);
+                            }
+                        });
+                    } else {
+                        donationList.innerHTML = '<p>No donation drives found.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
+        </script>
+
+    </main>
+
+    <footer>
+        <div class="footerNotes">
+            <p>words words words</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

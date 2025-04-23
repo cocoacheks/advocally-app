@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shelter Capacity Chart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .chart-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    .chart-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #202E1E;
+      margin-bottom: 0.25rem;
+    }
+
+    .chart-subtitle {
+      font-size: 1rem;
+      color: #202E1E;
+      margin-bottom: 1rem;
+    }
+
+    #shelterChart {
+      width: 100%;
+      max-width: 700px;
+      aspect-ratio: 4 / 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chart-wrapper">
+    <div class="chart-title">Shelter Capacity in Alberta</div>
+    <div class="chart-subtitle">As of March 2025</div>
+    <div id="shelterChart"></div>
+  </div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    let chart, data, options;
+
+    function drawChart() {
+      const rawData = google.visualization.arrayToDataTable([
+        ['City', 'Capacity', 'Occupancy'],
+        ['Calgary', 2162, 1749],
+        ['Edmonton', 2046, 1664],
+        ['Rest of Alberta', 925, 765]
+      ]);
+
+      // Add data labels
+      const view = new google.visualization.DataView(rawData);
+      view.setColumns([
+        0,
+        1,
+        {
+          calc: "stringify",
+          sourceColumn: 1,
+          type: "string",
+          role: "annotation"
+        },
+        2,
+        {
+          calc: "stringify",
+          sourceColumn: 2,
+          type: "string",
+          role: "annotation"
+        }
+      ]);
+
+      const container = document.getElementById('shelterChart');
+      const width = container.offsetWidth;
+      const height = width * 0.75;
+
+      options = {
+        backgroundColor: "transparent",
+        chartArea: {
+          left: 100,
+          top: 50,
+          width: '70%',
+          height: '60%'
+        },
+        colors: ['#EECA90', '#A09555'],
+        isStacked: false,
+        legend: {
+          position: 'bottom',
+          textStyle: {color: '#202E1E'}
+        },
+        hAxis: {
+          title: 'Count',
+          minValue: 0,
+          textStyle: {color: '#202E1E'},
+          titleTextStyle: {color: '#202E1E'}
+        },
+        vAxis: {
+          textStyle: {color: '#202E1E'}
+        },
+        height: height
+      };
+
+      chart = new google.visualization.BarChart(container);
+      chart.draw(view, options);
+    }
+
+    window.addEventListener('resize', drawChart);
+  </script>
+
+</body>
+</html>

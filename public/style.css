@@ -1,0 +1,1175 @@
+:root {
+    /* 2nd cheska's palette */
+    /* --background-color: #dcd8d5;
+    --page-color: #56371e;    
+    --kpi-border-color: #366831;
+    --kpi-tab-color: #a5c473; kpi background
+    --font-color: black;
+
+    --logo-font: #e3dbdb;
+    --tab-color: #846954;
+    --tab-hover: #cbac7a;
+    --tab-font: #fffefd;  */
+
+    --background-color: #e3e7dd; 
+    --page-color: #80924D;
+    --tab-color: #A09555;
+
+    /* --logo-font: #faf2f2; */
+    --tab-font: #FEFBEF;
+
+    /* cream */
+    --wildfire-color-1: #FEFBEF;
+    --wildfire-color-2: #FEFBEF;
+
+    --drug-color-1: #FEFBEF;
+    --drug-color-2: #FEFBEF;
+
+    --homeless-color-1: #FEFBEF;
+    --homeless-color-2: #FEFBEF;
+
+    --shelter-color-1: #FEFBEF;
+    --shelter-color-2: #FEFBEF;
+
+    --bebasP: #202E1E;
+    --bebasB: #80924D;
+
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    /* transition-duration: 500ms */
+}
+
+body {
+    /* background-color: var(--background-color); */
+    background-color: #FEFBEF;
+    color: var(--kpi-tab-color);
+    padding: 0.6rem;
+    overflow-x: hidden;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.8px;
+    /* font-family:  */
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+/* a:hover {
+    /* color: lightgreen;  */
+
+.boldText {
+    color: var(--drug-color-2);
+}
+
+header {
+    /* background: white; */
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+
+.logoContainer {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.6rem;
+    /* padding-top: 10rem; */
+    overflow: hidden;
+    background: #FEFBEF;
+
+    position: relative;
+    border-radius: 50%;
+    /*circle border */
+    /* background-color: rgb(215, 237, 202);  */
+    padding: 0.3rem;
+}
+
+#logo {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    /* border-radius: 5px; */
+
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    /* margin-right: 0.5rem; */
+    margin-left: 0.9rem;
+
+
+}
+
+.navTab {
+    display: flex;
+    flex-direction: row;
+    gap: 1.8rem;
+
+    position: absolute;
+    top: 47px;
+    
+}
+
+
+
+.frontTab {
+    background-color: var(--page-color);
+
+  
+    width: 13.5rem;
+    height: 8.4rem;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    /* margin-left: -0.001rem; */
+    
+
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 2rem;
+    padding-top: 3.5rem;
+    padding-right: 2.1rem;
+}
+
+.headerPlate {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    /* background-color: white; */
+    /* hover text, tab goes up */
+}
+
+#advocally {
+    color: var(--logo-font);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.16rem;
+}
+
+.tabPane {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+.tab {
+    background-color: var(--tab-color);
+    width: 140px;
+    height: 60px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tab:hover {
+    /* margin-top: 0px;
+    height: 65px;
+    background-color: var(--tab-hover); */
+    transform: translateY(-5px);
+    height: 65px;
+}
+
+.tab a {
+    color: var(--tab-font);
+}
+
+main {
+    background-color: var(--page-color);
+}
+
+
+.frontPage {
+    margin-top: 7rem;
+    position: relative;
+    background-color: var(--page-color);
+    border-radius: 20px;
+    padding: 1rem;
+    width: 100%;
+    
+
+    
+    /* height: 400vh; */
+    /* background: linear-gradient(135deg, var(--page-color), #9b7971); */
+}
+
+.frontPage h2 {
+    color: #FEFBEF;
+}
+.frontPage h4 {
+    font-weight: 900;
+    /* color: rgb(224, 220, 220); */
+    color:  #FEFBEF;
+    color: #202E1E;
+    font-family: "Aleo";
+}
+
+.subHeadingBold {
+    /* color: #202E1E; */
+    color:  #FEFBEF;
+}
+
+
+/* SECTION 1 */
+
+.introSec {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.introContainer h2 {
+    font-size: 4rem;
+}
+
+.advocallyIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    line-height: 1.7rem;
+    font-family: 'Bebas Neue';
+}
+
+
+/* KPI SECTION */
+
+.kpiSec {
+    padding: 1rem;
+    /* background: white; */
+    height: fit-content;
+    max-height: 1000vh;
+
+    
+}
+
+.wildfireContainer {
+    border-radius: 30px;
+    /* background: var(--kpi-border-color); */
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.wildfireImageContainer {
+    background: var(--wildfire-color-1);
+    padding: 0.7rem;
+    width: 50%;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.wildfireDesc {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background: var(--wildfire-color-2);
+    border-radius: 30px;
+    width: 50%;
+    height: 500px;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.9rem;
+    /* shrink the text depending on content aroujnd it // flex?? */
+}
+
+.wildfireText,
+.wildfireNum {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Bebas-Neue" sans-serif;
+    font-weight: bold;
+}
+
+.wildfireDesc h4 {
+    font-size: 11rem;
+    color: #A8763E;
+}
+
+.wildfireDesc p {
+    font-size: 4rem;
+    color: #A8763E;
+}
+
+.wildfireImage {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* COPY BROWN FOR BUTTON */
+
+/* DRUUUUUUUUUUG */
+
+.drugContainer {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 1rem;
+    /* height: 450px; */
+    /* width: 100%; */
+    margin-bottom: 1rem;
+}
+
+
+.drugDesc {
+    /* margin-bottom: 1rem; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--drug-color-1);
+    border-radius: 30px;
+   
+    width: 30%;
+    height: 450px;
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1.5rem;
+        
+}
+
+.drugBoldText {
+    font-size: 1.3rem;
+    color: #202E1E;
+    font-weight: bold;
+
+    display: flex;
+    margin-bottom: 0.5rem;
+    /* margin-bottom: 1.5rem; */
+}
+
+.drugDesc p {
+    color:  #202E1E;
+}
+
+.drugChartContainer {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--drug-color-2);
+    border-radius: 30px;
+
+    /* max-width: 1000px;
+    max-height: 500px; */
+    width: 70%;
+    height: 450px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.citation {
+    font-family: "Aleo";
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    margin-bottom: 1rem;
+    margin-top: -3rem;
+    display: block;
+    text-align: center;
+}
+
+.citation2 {
+    font-family: "Aleo";
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    margin-left: 0.9rem;
+    margin-right: 0.9rem;
+    /* margin-bottom: 1rem; */
+    margin-top:4rem;
+    margin-bottom: -5rem;
+    display: block;
+    text-align:end;
+}
+
+
+#drugChart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-content: center;
+}
+
+
+/* HOMELESSSSSSSS */
+
+.homelessContainer {
+    display: flex;
+    gap: 1rem;
+    /* overflow: hidden; */
+
+    /* width: 100%;*/
+    height: 450px; 
+    margin-bottom: 1rem;
+    
+    }
+.homelessChartContainer {
+    /* margin-top: -0.5rem; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    
+    
+    width: 50%;
+    height: 100%;
+    /* max-width: 990px; */
+    /* height: 100%; */
+    /* overflow: hidden; */
+   
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: var(--homeless-color); */
+}
+
+#homelessChart {
+    border-radius: 30px;
+   width: 100%;
+   height: 100%;
+   /* padding: 1rem; */
+   
+   background-color: var(--homeless-color-1);
+   overflow: hidden;
+}
+
+
+.homelessDesc {
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+
+    background-color: var(--homeless-color-2);
+    color: white;
+
+    width: 50%;
+    /* max-width: 642px; */
+    height: 100%;
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;  */
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    /* line-height: 1.5rem; */
+    gap: 0.7rem;
+    font-size: 1rem;
+}
+
+.homelessDesc p {
+    display: block;
+    text-align: center;
+}
+.homelessBoldText {
+    font-size: 1.5rem;
+    color: var(--homeless-color-1);
+    font-weight: bold;
+
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    /* margin-bottom: 1.5rem; */
+}
+
+
+.shelterContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.shelterChartContainer {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-color: var(--shelter-color-1);
+    
+    
+    width: 100%;
+    height: 680px;
+    
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+#shelterChart {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.shelterDesc {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    
+
+    background-color: var(--shelter-color-2);
+    color: white;
+
+    max-width:  100%;
+    height: 400px;
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    line-height: 2.4rem;
+    font-size: 1.1rem;
+}
+
+.shelterDesc p {
+    display: block;
+    text-align: center;
+}
+
+.shelterBoldText {
+    font-size: 1.5rem;
+    color: var(--shelter-color-1);
+    font-weight: bold;
+
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    /* margin-bottom: 1.5rem; */
+}
+
+.shelterBoldText,
+.homelessBoldText,
+.drugBoldText {
+    color: var(--bebasB);
+}
+
+p {
+    color: var(--bebasP);
+}
+.boldText {
+    color: var(--kpi-tab-color)
+}
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+    body {
+        height: 1000px;
+    }
+    
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .tabPane {
+        gap: 0.5rem;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 49px;
+        height: 49px;
+        margin-top: -7.5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width:60%;
+        height: 60%;
+        object-fit: contain;
+        border-radius: 5px;
+        
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-left: 0.5rem;
+    }
+
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+    width: 20%;
+    height: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    margin-top: 25px;
+    padding: 0.7rem;
+
+    letter-spacing: 0.8px;
+
+    }
+
+    .tab a {
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introSec {
+        margin: 2.9rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .kpiSec {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wildfireContainer,
+    .drugContainer,
+    .homelessContainer,
+    .shelterContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .wildfireImageContainer,
+    .wildfireDesc,
+    .drugChartContainer,
+    .drugDesc,
+    .homelessChartContainer,
+    .homelessDesc,
+    .shelterChartContainer,
+    .shelterDesc {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .wildfireImageContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wildfireDesc {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.1rem;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+    }
+    
+    .wildfireNum h4 {
+        font-size: 4.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .wildfireText p {
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .drugChartContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 290px; 
+        padding-top: 3rem;  
+    }
+
+    .drugDesc {
+        height: 350px;
+    }
+    
+
+    .drugDesc p {
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+
+    .drugDesc .drugBoldText {
+        font-size: 0.9rem;
+    }
+
+
+    .drugChartContainer .citation {
+        margin-top: -1.3rem;
+        font-size: 0.2rem;
+        width: 100%;
+        /* margin-top: -1rem; */
+    }
+
+    .homelessChartContainer {
+        padding: 0;
+        height: 500px;
+    }
+
+    .homelessDesc {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 2.5rem;
+        padding-bottom: -1rem;
+        height: 320px;
+    }
+
+    .homelessDesc p {
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        line-height: 0.8rem;
+    }
+
+    .homelessBoldText {
+        font-size: 0.9rem;
+    }
+
+    .homelessDesc .citation2 {
+        margin-top: 1.4rem;
+        margin-bottom: 0;
+        font-size: 0.4rem;
+
+        padding: 1rem;
+        width: 100%;
+        display: block;
+        text-align: center;
+        line-height: 0.6rem;
+    }
+
+    .shelterChartContainer {
+        overflow: auto;
+        width: 100%;
+        height: 400px;
+    }
+
+    #shelterChart {
+        overflow:visible;     
+    }
+
+    .shelterDesc {
+        height: 400px;
+        padding: 0.9rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .shelterDesc p {
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+    
+    .shelterBoldText {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    body {
+        height: 1000px;
+    }
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 90px;
+        height: 90px;
+        margin-top: -5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 5px;
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-right: 1.3rem;
+    }
+
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+    width: 20%;
+    height: 40px;
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0.7rem;
+    }
+
+    .tab a {
+        font-size: 0.6rem;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introSec {
+        margin: 2.9rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .kpiSec {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wildfireContainer,
+    .drugContainer,
+    .homelessContainer,
+    .shelterContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wildfireImageContainer,
+    .wildfireDesc,
+    .drugChartContainer,
+    .drugDesc,
+    .homelessChartContainer,
+    .homelessDesc,
+    .shelterChartContainer,
+    .shelterDesc {
+        width: 100%;
+    }
+
+    .drugChartContainer .citation {
+        margin-top: 1.7rem;
+        font-size: 0.3rem;
+        /* margin-top: -1rem; */
+    }
+
+    .citation2 {
+        margin-top: 1rem;
+        font-size: 0.3rem;
+    }
+    .shelterChartContainer {
+        overflow: hidden;
+        height: 100%;
+        max-height: 500px;
+    }
+
+    #shelterChart {
+        overflow:hidden;     
+    }
+
+
+    .shelterDesc {
+        height: 600px;
+    }
+
+    .shelterDesc p {
+        font-size: 1rem;
+        /* line-height: 1.3rem; */
+    }
+    
+    .shelterBoldText {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        height: 1500px;
+    }
+    .frontPage {
+        border-top-left-radius: 70px;
+    }
+    .navTab {
+        width: 100%;
+        gap: 0.5rem;
+        margin-right: 25px;
+    }
+
+    .frontTab {
+        width: 24%;
+        margin-top: 1rem;
+    }
+
+    .logoContainer {
+        width: 130px;
+        height: 130px;
+        margin-top: -2.5rem;
+        padding: 0;
+    }
+
+    #logo {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
+        border-radius: 5px;
+
+        /* margin-top: 4rem; */
+        /* margin-bottom: 0.5rem; */
+        margin-right: 1.6rem;
+    }
+
+    
+    .tabPane {
+        width: 70%;
+    }
+
+    .tab {
+        width: 20%;
+        height: 40px;
+
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        padding: 0.7rem;
+    }
+
+    .tab a {
+        font-size: 0.6rem;
+    }
+
+    .tab:hover {
+        transform: translateY(-5px);
+        height: 45px;
+    }
+    
+    .introSec,
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introSec {
+        margin: 2.9rem;
+        margin-top: 5rem;
+        padding: 0.4rem;
+    }
+
+    .introContainer h2,
+    .advocallyIntro {
+        display: block;
+        text-align: center;
+    }
+
+    .advocallyIntro {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .kpiSec {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wildfireContainer,
+    .drugContainer,
+    .homelessContainer,
+    .shelterContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wildfireImageContainer,
+    .wildfireDesc,
+    .drugChartContainer,
+    .drugDesc,
+    .homelessChartContainer,
+    .homelessDesc,
+    .shelterChartContainer,
+    .shelterDesc {
+        width: 100%;
+    }
+
+    .drugDesc {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+    .drugChartContainer .citation {
+        margin-top: 1.7rem;
+        font-size: 0.3rem;
+        /* margin-top: -1rem; */
+    }
+
+    .citation2 {
+        margin-top: 1rem;
+        font-size: 0.3rem;
+    }
+
+    .homelessChartContainer {
+        padding-top: 0.5rem;
+    }
+    /* .homelessDesc p {
+        margin-top: -5rem;
+    } */
+
+    .shelterChartContainer {
+        overflow: hidden;
+        height: 100%;
+        max-height: 600px;
+    }
+
+    #shelterChart {
+        overflow:hidden;     
+    }
+
+
+    .shelterDesc {
+        height: 600px;
+    }
+
+    .shelterDesc p {
+        font-size: 1rem;
+        /* line-height: 1.3rem; */
+    }
+    
+    .shelterBoldText {
+        font-size: 1.5rem;
+    }
+}
+/* 
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+
+} */
